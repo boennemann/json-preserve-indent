@@ -23,7 +23,7 @@ function scenario (amount, tabs, ending) {
       baz: [1, 2, 3]
     }
 
-    var data = require('.')(JSON.stringify(input, null, indent) + ending)
+    var data = require('./')(JSON.stringify(input, null, indent) + ending)
 
     tt.is(data.get('foo'), 'bar', '#get - retrieve property')
     tt.is(data.get('bar.foo'), 'bar', '#get - retrieve property from child object')
