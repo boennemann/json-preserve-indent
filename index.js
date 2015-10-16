@@ -2,7 +2,7 @@ var _ = require('lodash')
 
 module.exports = function (raw) {
   raw = String(raw)
-  var ending = _.get(raw.match(/}(\n*)$/m), 1)
+  var ending = _.get(raw.match(/}(\n*)$/), 1)
   var indent = _.get(raw.match(/^[ \t]+/m), 0)
 
   var data = JSON.parse(raw)
