@@ -17,10 +17,10 @@ function scenario (amount, tabs, ending) {
     var indent = tabs ? Array(amount + 1).join('\t') : amount
     var input = {
       foo: 'bar',
+      baz: [1, 2, 3],
       bar: {
         foo: 'bar'
-      },
-      baz: [1, 2, 3]
+      }
     }
 
     var data = require('./')(JSON.stringify(input, null, indent) + ending)
@@ -39,10 +39,10 @@ function scenario (amount, tabs, ending) {
 
     tt.equals(data.format(), JSON.stringify({
       foo: 'abc',
+      baz: [10, 2, 3],
       bar: {
         foo: 'def'
-      },
-      baz: [10, 2, 3]
+      }
     }, null, indent) + ending, '#format - preserve indentation and file ending')
 
     tt.end()
