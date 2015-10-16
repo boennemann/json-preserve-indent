@@ -8,6 +8,7 @@ module.exports = function (raw) {
   var data = JSON.parse(raw)
 
   return {
+    data: data,
     get: _.bind(_.get, _, data),
     set: _.bind(_.set, _, data),
     format: function () {
