@@ -1,0 +1,10 @@
+# common
+
+coverage
+node_modules
+*.log
+*.dump
+*.swp
+.DS_Store
+.npmrc
+.nyc_output
