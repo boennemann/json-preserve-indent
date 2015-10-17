@@ -1,11 +1,11 @@
 var _ = require('lodash')
 
 module.exports = function (raw) {
-  raw = String(raw)
-  var ending = _.get(raw.match(/}(\n*)$/), 1)
-  var indent = _.get(raw.match(/^[ \t]+/m), 0)
+  var rawJSON = String(raw)
+  var ending = _.get(rawJSON.match(/}(\n*)$/), 1)
+  var indent = _.get(rawJSON.match(/^[ \t]+/m), 0)
 
-  var data = JSON.parse(raw)
+  var data = JSON.parse(rawJSON)
 
   return {
     data: data,
