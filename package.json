@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/boennemann/json-preserve-indent#readme",
   "dependencies": {
-    "lodash": "^3.10.1"
+    "lodash": "^4.0.1"
   },
   "devDependencies": {
     "coveralls": "^2.11.4",
