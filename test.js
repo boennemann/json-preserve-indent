@@ -6,7 +6,11 @@ test('json-preserve-indent', function (t) {
     [2, false, ''],
     [4, false, '\n'],
     [1, true, '\n\n'],
-    [2, true, '\n\n\n']
+    [2, true, '\n\n\n'],
+    [2, true, '\r\n'],
+    [2, true, '\r'],
+    [2, true, ' '],
+    [2, true, '\t']
   ].forEach(test.apply.bind(scenario, t))
 
   t.end()
